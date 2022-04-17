@@ -19,6 +19,9 @@ const [
     error,
   ] = useSignInWithEmailAndPassword(auth);
   const navigate=useNavigate();
+   
+  const location = useState()
+  const from = location.state?.from.pathname || '/'
 
 const handleEmailBlur = event=>{
     setEmail(event.target.value)
@@ -29,7 +32,7 @@ const handlePasswordBlur=event=>{
 
 
 if(user){
-    navigate('/shop')
+    navigate(from,{replace:true})
 }
 
 const handleuserSignIn= event =>{
